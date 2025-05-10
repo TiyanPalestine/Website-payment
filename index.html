@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Payment Keel</title>
+  <title>Payment Tiyantzy</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -161,9 +161,8 @@
 
 <div class="shine"></div>
 
-<!-- Welcome Animation -->
 <div id="welcome-message" class="welcome-message">
-  <h1>hey, i am Tiyantyy</h1>
+  <h1>hey, i am Tiyantzy</h1>
   <p>Selamat Datang Di Website Simple Payment Ku</p>
  <p>aku harap kamu tidak salah tf^_^</p>
   <button id="go-to-payment" class="btn-link">go to payment</button>
@@ -171,7 +170,6 @@
 
 <audio id="clickSound" src="https://files.catbox.moe/0i11yd.mp3"></audio>
 
-<!-- Konten Utama -->
 <div id="main-content" style="display: none;">
   <h1>Payment Methods</h1>
   <p>Silakan Pilih Salah Satu Metode Pembayaran Di Bawah Ini</p>
@@ -214,8 +212,16 @@
 <canvas id="snow"></canvas>
 
 <script>
-  // Welcome transition
-  document.getElementById('go-to-payment').addEventListener('click', function () {
+  // Get the button and audio elements
+  const goToPaymentButton = document.getElementById('go-to-payment');
+  const clickSound = document.getElementById('clickSound');
+
+  // Add event listener to the button
+  goToPaymentButton.addEventListener('click', function () {
+    // Play the sound
+    clickSound.play();
+
+    // Hide welcome message and show main content
     document.getElementById('welcome-message').style.display = 'none';
     document.getElementById('main-content').style.display = 'block';
   });
